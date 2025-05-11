@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar"; // Pastikan Sidebar diimpor dari lok
 import Dashboard from "./pages/Dashboard";
 import Form from "./pages/Form";
 import ListBookRoom from "./pages/ListBookRoom";
+import AdditionalTest from "./pages/AdditionalTest";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/booking-room" element={<ListBookRoom />} />
                 <Route path="/create" element={<Form />} />
+                <Route path="/additional-test" element={<AdditionalTest />} />
               </Routes>
             </main>
           </div>
