@@ -1,0 +1,5 @@
+@import "tailwindcss";
+/* Tambahkan ini di file CSS Anda */
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none; /* Sembunyikan ikon bawaan browser */
+}
