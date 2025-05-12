@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import DashboardSummaryCard from "../components/DashboardSummaryCard";
 import { AiOutlineDown } from "react-icons/ai";
+import icon_listrik from "../assets/icon_listrik.png";
 
 const mockData = [
   {
@@ -25,7 +26,6 @@ const mockData = [
 const Dashboard = () => {
   const [data, setData] = useState([]); // State untuk menyimpan data dari API
   const [selectPeriode, setSelectPeriode] = useState(""); // State untuk status loading
-
 
   const bulanMap = {
     Jan: "Januari",
@@ -117,7 +117,10 @@ const Dashboard = () => {
           // Render hasil group
           return Object.entries(grouped).map(([officeName, rooms], i) => (
             <div key={officeName + i} className="m-2">
-              <h2 className="text-lg font-semibold mb-4">{officeName}</h2>
+              <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <img src={icon_listrik} alt="icon" />
+                {officeName}
+              </h2>
               <div className="flex flex-wrap gap-4">
                 {rooms.map((room, j) => (
                   <div key={j} className="w-full max-w-[268px]">
